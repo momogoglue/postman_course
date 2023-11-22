@@ -1,0 +1,705 @@
+{
+	"info": {
+		"_postman_id": "538113d8-5585-4a36-ae50-2d9b70dadc06",
+		"name": "Dummy JSON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27933073",
+		"_collection_link": "https://glue-labs.postman.co/workspace/Postman-Course~7f978423-aa9e-4651-b4a3-794aecd1d542/collection/27933073-538113d8-5585-4a36-ae50-2d9b70dadc06?action=share&source=collection_link&creator=27933073"
+	},
+	"item": [
+		{
+			"name": "#A Auth",
+			"item": [
+				{
+					"name": "#A1 Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json()",
+									"",
+									"var request = pm.request.body",
+									"",
+									"console.log(request)",
+									"",
+									"if(response.token) {",
+									"    pm.environment.set(\"token\", response.token)",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"kminchelle\",\n    \"password\": \"0lelplR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"kminchelle\",\n    \"password\": \"0lelplR\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-ratelimit-limit",
+									"value": "120"
+								},
+								{
+									"key": "x-ratelimit-remaining",
+									"value": "117"
+								},
+								{
+									"key": "date",
+									"value": "Tue, 14 Nov 2023 17:37:01 GMT"
+								},
+								{
+									"key": "x-ratelimit-reset",
+									"value": "1699983430"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "530"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"212-YYpZ0OMmFqBmIboMQwDff83Kjd0\""
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 15,\n    \"username\": \"kminchelle\",\n    \"email\": \"kminchelle@qq.com\",\n    \"firstName\": \"Jeanne\",\n    \"lastName\": \"Halvorson\",\n    \"gender\": \"female\",\n    \"image\": \"https://robohash.org/autquiaut.png\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInVzZXJuYW1lIjoia21pbmNoZWxsZSIsImVtYWlsIjoia21pbmNoZWxsZUBxcS5jb20iLCJmaXJzdE5hbWUiOiJKZWFubmUiLCJsYXN0TmFtZSI6IkhhbHZvcnNvbiIsImdlbmRlciI6ImZlbWFsZSIsImltYWdlIjoiaHR0cHM6Ly9yb2JvaGFzaC5vcmcvYXV0cXVpYXV0LnBuZyIsImlhdCI6MTY5OTk4MzQyMSwiZXhwIjoxNjk5OTg3MDIxfQ.tKz71qz2rHK1E_6rGk3h16GHulnpKXkq2Th8t5gSGxs\"\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"kminchelle\",\n    \"password\": \"0lelplRz\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-ratelimit-limit",
+									"value": "120"
+								},
+								{
+									"key": "x-ratelimit-remaining",
+									"value": "119"
+								},
+								{
+									"key": "date",
+									"value": "Tue, 14 Nov 2023 17:37:20 GMT"
+								},
+								{
+									"key": "x-ratelimit-reset",
+									"value": "1699983490"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "33"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"21-dBEoW0UmTF+EGUMaprEp9/8zNNA\""
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid credentials\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "#P Products",
+			"item": [
+				{
+					"name": "#P1 get all",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Response status code should be 200', function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"pm.test(\"Validate total, skip, and limit values are numbers\", function() {",
+									"    pm.expect(pm.response.json()).to.have.property(\"total\", 90, \"total value is not correct\")",
+									"    pm.expect(pm.response.json()).to.have.property(\"skip\", 0, \"skip value is not correct\")",
+									"    pm.expect(pm.response.json()).to.have.property(\"limit\", 30, \"limit value is not correct\")",
+									"})",
+									"",
+									"pm.test('Response time should be less than 500ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "#P2 get by id",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var idx = pm.variables.replaceIn('{{$randomInt}}')",
+									"pm.variables.set(\"PId\", idx % 200)"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Response JSON keys should include id, title, description, price, discountPercentage, rating, stock, brand, category, thumbnail, images', function () {",
+									"    pm.test(\"Response JSON keys should include id, title, description, price, discountPercentage, rating, stock, brand, category, thumbnail, images\", function () {",
+									"     pm.expect(pm.response.json()).to.have.all.keys(",
+									"        'id', 'title', 'description', 'price', 'discountPercentage', 'rating', 'stock', 'brand', 'category', 'thumbnail', 'images'",
+									"     );",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/:PId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								":PId"
+							],
+							"variable": [
+								{
+									"key": "PId",
+									"value": "{{PId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "#P3 search products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Response status should be 200', function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"pm.test('If products array is empty the total value should be 0', function () {",
+									"    var responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('object');",
+									"",
+									"    // Check if products array is empty",
+									"    if (responseData.products.length === 0) {",
+									"        pm.expect(responseData.total).to.equal(0);",
+									"    }",
+									"});",
+									"",
+									"pm.test('Response JSON keys should include products, total, skip, limit', function () {",
+									"    pm.expect(pm.response.json()).to.have.all.keys('products', 'total', 'skip', 'limit');",
+									"});",
+									"",
+									"var responseTime = pm.variables.replaceIn('{{$randomInt}}')",
+									"",
+									"pm.test(`Response time should be less than ${responseTime}`, function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(parseInt(responseTime));",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/search?q={{$randomProduct}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "{{$randomProduct}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "#P4 get all product categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var categories = pm.response.json();",
+									"",
+									"pm.test('Categories exist', function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"    pm.expect(pm.response.json()).to.be.an('array');",
+									"    pm.expect(pm.response.json()).to.have.lengthOf.at.least(1, 'Categories should exist');",
+									"})",
+									"",
+									"pm.test(\"Categoriesa are 20\", function() {",
+									"    pm.expect(pm.response.json()).to.have.lengthOf(20, \"There are 20 categories\");",
+									"})",
+									"",
+									"console.log(categories)",
+									"",
+									"var arrayLength = categories.length",
+									"var categoryIndex = Math.floor(Math.random() * arrayLength)",
+									"",
+									"pm.environment.set(\"category\", categories[categoryIndex])"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "#P5 get products by category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validate response status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"pm.test(\"Validate products array is not empty\", function () {",
+									"    pm.expect(pm.response.json().products).to.be.an('array').that.is.not.empty;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/category/{{category}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"category",
+								"{{category}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "#P6 add new product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validate response status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"pm.test('Response JSON keys should include id and title', function () {",
+									"    pm.expect(pm.response.json()).to.have.all.keys('id', 'title');",
+									"});",
+									"",
+									"pm.test(\"Response JSON value for id should be 101\", function () {",
+									"    pm.expect(pm.response.json().id).to.equal(101);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"{{$randomProduct}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "#P7 update product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validate response status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"pm.test('Response JSON should have the keys - id, title, price, stock, rating, images, thumbnail, description, brand, category', function () {",
+									"    pm.expect(pm.response.json()).to.have.all.keys('id', 'title', 'price', 'stock', 'rating', 'images', 'thumbnail', 'description', 'brand', 'category');",
+									"});",
+									"",
+									"var PId = pm.variables.get(\"PId\")",
+									"",
+									"pm.test(`Response JSON value for id should be ${PId}`, function () {",
+									"    pm.expect(pm.response.json().id).to.equal(PId);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var productName = pm.variables.replaceIn('{{$randomProduct}}')",
+									"pm.variables.set(\"productName\", productName)",
+									"",
+									"",
+									"var idx = pm.variables.replaceIn('{{$randomInt}}')",
+									"pm.variables.set(\"PId\", idx % 200)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"{{productName}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/:PId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								":PId"
+							],
+							"variable": [
+								{
+									"key": "PId",
+									"value": "{{PId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "#P8 update product Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validate response status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"pm.test(\"Respone JSON key isDeleted should be true\", function () {",
+									"    pm.expect(pm.response.json().isDeleted).to.be.true;",
+									"});",
+									"",
+									"var PId = pm.variables.get(\"PId\")",
+									"pm.test(`Response JSON value for id should be ${PId}`, function () {",
+									"    pm.expect(pm.response.json().id).to.equal(PId);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var idx = pm.variables.replaceIn('{{$randomInt}}')",
+									"pm.variables.set(\"PId\", idx % 200)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/:PId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								":PId"
+							],
+							"variable": [
+								{
+									"key": "PId",
+									"value": "{{PId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

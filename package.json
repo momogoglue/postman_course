@@ -1,0 +1,19 @@
+{
+  "name": "postman-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "newman_collectino_run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^5.1.2",
+    "newman-reporter-html": "^1.0.5",
+    "newman-reporter-htmlextra": "1.22.11",
+    "newman-reporter-json": "^1.0.0",
+    "node-cron": "^3.0.3"
+  }
+}
